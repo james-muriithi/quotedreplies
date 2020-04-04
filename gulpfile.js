@@ -7,6 +7,7 @@ const connect       = require('gulp-connect');
 const htmlmin       = require('gulp-htmlmin');
 const uglify        = require('gulp-uglify-es').default;
 
+
 const paths = {
   html: '*.html',
   css: 'css/**/*.css',
@@ -14,7 +15,7 @@ const paths = {
   sw: 'service-worker.js',
   images: 'images/**',
   vendor: 'libs/**/*.js',
-  vendor_css: 'libs/**/*.css',
+  vendor_css: 'libs/css/*.css',
   manifest: 'site.webmanifest'
 };
 
@@ -35,6 +36,7 @@ const imagesGulp = function() {
     ]))
     .pipe(gulp.dest('public/images'));
 };
+
 
 const gulpCss = function() {
   return gulp.src(paths.css)
