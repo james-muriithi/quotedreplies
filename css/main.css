@@ -57,7 +57,7 @@ body {
 .navbar {
     border-top: 1px solid transparent;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    background: #2196F3!important;
+    background: #002AA8!important;
 }
 
 .navbar-brand svg{
@@ -137,7 +137,7 @@ body {
     -webkit-transition-property: padding-top;
     transition-property: padding-top;
 
-    color: #1976D2;
+    color: #002AA8;
 }
 
 .button-inactive {
