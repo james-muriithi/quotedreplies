@@ -37,7 +37,7 @@ body {
   width:60px;
   bottom: 65px;
   position: fixed;
-  background: #0B3F8E;
+  background: #536dfe;
   border-radius: 50%;
   z-index: 10000;
   cursor: pointer;
@@ -57,7 +57,7 @@ body {
 .navbar {
     border-top: 1px solid transparent;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to right, #0b3f8e, #0e4aa5, #1255bc, #1661d4, #1a6ded)!important;
+    background: #2196F3!important;
 }
 
 .navbar-brand svg{
@@ -137,7 +137,7 @@ body {
     -webkit-transition-property: padding-top;
     transition-property: padding-top;
 
-    color: #6200ee;
+    color: #1976D2;
 }
 
 .button-inactive {
@@ -169,6 +169,16 @@ body {
 }
 .navbar-nav li a{
   font-size: 1.1rem;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 24px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
 
 @media screen and (min-width: 576px) {

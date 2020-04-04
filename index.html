@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="./browserconfig.xml">
-    <meta name="theme-color" content="#0B3F8E">
+    <meta name="theme-color" content="#1976D2">
     <!-- SEO -->
     <meta name="description" content="Reply or quote a tweet with @quoted_replies to see the quoted replies for a tweet (even your own tweet), or share the tweet in my DM.">
     <meta name="author" content="James Muriithi">
@@ -109,8 +109,10 @@
         <!-- Feed page -->
         <div id="page-feed" class="inactive">
             <h2>Popular Tweets</h2>
-            <div class="block">
+            <div class="block card">
+                <div class="card-body">
                 <blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://twitter.com/quoted_replies?ref_src=twsrc%5Etfw">@quoted_replies</a></p>&mdash; Dazils Ferdinand (@_dazils_) <a href="https://twitter.com/_dazils_/status/1246119110410416130?ref_src=twsrc%5Etfw">April 3, 2020</a></blockquote>
+            </div>
             </div>
         </div>
         <!-- Create page -->
@@ -167,6 +169,9 @@
 </body>
 
 </html>
+<script type="text/javascript">
+
+</script>
 <!-- <script type="text/javascript" charset="utf-8">
 window.twttr = (function (d, s, id) {
     var t, js, fjs = d.getElementsByTagName(s)[0];
@@ -183,7 +188,7 @@ window.twttr = (function (d, s, id) {
     });
 }(document, "script", "twitter-wjs"));
 
-// twttr.events.bind('click', function(event) {
+// twttr.events.ubind('click', function(event) {
 //     event.preventDefault();
 // });   
 
