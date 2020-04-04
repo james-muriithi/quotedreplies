@@ -178,7 +178,7 @@
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', () => {
         const parsedUrl = new URL(window.location)
-        if (parsedUrl.searchParams.get('url').trim() != 'null') {
+        if (parsedUrl.searchParams.get('url') != 'null') {
             let expanded_url = parsedUrl.searchParams.get('url').trim();
             if (typeof expanded_url != 'undefined' && expanded_url != '' && expanded_url != null) {
                 let parts = expanded_url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
