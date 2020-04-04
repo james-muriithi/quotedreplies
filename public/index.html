@@ -6,15 +6,17 @@
             if (typeof expanded_url != 'undefined' && expanded_url != '' && expanded_url != null) {
                 let parts = expanded_url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
                 try {
+                    let newWindow = window.open();
                     let tweetId = parts[4]
                     let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
-                    window.open(link, '_blank');
+                    newWindow.location = link;
+                    // window.open(link, '_blank');
                     alert(link);
 
                 } catch (error) {
                     console.log(error)
                 }
-                window.history.replaceState({}, document.title, "/quotedreplies");
+                window.history.replaceState({}, document.title, "/quotedreplies/");
             }
         }
     })</script>
