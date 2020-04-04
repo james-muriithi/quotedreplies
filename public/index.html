@@ -8,7 +8,8 @@
                 try {
                     let tweetId = parts[4]
                     let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
-                    window.location.href = link;
+                    window.open(link, '_blank');
+                    // alert(link);
 
                 } catch (error) {
                     console.log(error)
