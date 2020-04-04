@@ -172,7 +172,12 @@
 
 </html>
 <script type="text/javascript">
-
+    window.addEventListener('DOMContentLoaded', ()=>{
+        const parsedUrl = new URL(window.location)
+        alert('Title shared: ' + parsedUrl.searchParams.get('title'));
+        alert('Text shared: ' + parsedUrl.searchParams.get('text'));
+        alert('URL shared: ' + parsedUrl.searchParams.get('url'));
+    })
 </script>
 <!-- <script type="text/javascript" charset="utf-8">
 window.twttr = (function (d, s, id) {
