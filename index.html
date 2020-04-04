@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#0B3F8E">
+    <!-- SEO -->
+    <meta name="description" content="Reply or quote a tweet with @quoted_replies to see the quoted replies for a tweet (even your own tweet), or share the tweet in my DM.">
+    <meta name="author" content="James Muriithi">
+    <meta name="keywords" content="quoted_replies, quoted replies, replies">
+    <meta property="og:site_name" content="https://twitter.com/quoted_replies">
+    <meta property="og:title" content="Quoted Replies" />
+    <meta property="og:description" content="Reply or quote a tweet with @quoted_replies to see the quoted replies for a tweet (even your own tweet), or share the tweet in my DM." />
+    <meta property="og:image:url" itemprop="image" content="https://james-muriithi.github.io/fyp-ms/assets/images/logo-lg.png">
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1227506065023143936/97fRlnwW_400x400.jpg" />
+    <meta property="og:image:url" content="https://pbs.twimg.com/profile_images/1227506065023143936/97fRlnwW_400x400.jpg" />
+    <meta property="og:image:secure_url" content="https://pbs.twimg.com/profile_images/1227506065023143936/97fRlnwW_400x400.jpg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+
+    <title>Quoted Replies</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" type="text/css">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link prefetch href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-theme="dark" class="h-100">
+    <!-- As a heading -->
+    <nav class="navbar fixed-top navbar-dark bg-primary nav-fill">
+        <h2 class="navbar-brand mb-0 text-white">
+            <!-- logo -->
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet">
+                <metadata>
+                    Created by potrace 1.15, written by Peter Selinger 2001-2017
+                </metadata>
+                <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+                    <path d="M1424 3124 c-346 -232 -608 -479 -779 -734 -106 -159 -184 -341 -221 -520 -25 -119 -26 -364 -1 -480 87 -406 422 -646 836 -600 52 6 122 17 156 26 184 47 359 190 433 354 53 120 69 352 32 494 -113 444 -624 645 -1017 402 l-41 -26 5 43 c36 319 268 625 713 941 52 37 95 69 95 72 0 9 -70 114 -76 114 -4 0 -65 -39 -135 -86z" />
+                    <path d="M3090 3132 c-601 -404 -935 -829 -1016 -1292 -23 -132 -15 -382 15 -495 38 -141 93 -238 196 -341 57 -58 114 -104 155 -127 137 -75 309 -106 480 -87 205 23 331 80 460 210 97 98 149 180 187 295 23 69 27 97 27 205 0 111 -3 134 -28 205 -60 173 -187 321 -340 395 -104 50 -188 70 -301 70 -146 0 -265 -37 -388 -121 l-60 -41 6 73 c12 150 67 285 179 444 112 159 363 389 566 520 34 22 62 45 62 50 0 14 -69 115 -78 115 -4 0 -59 -35 -122 -78z" />
+                </g>
+            </svg>
+            Qouted Replies
+        </h2>
+        <div class="d-none d-sm-block">
+            <ul class="navbar-nav m-r-30 d-inline-block">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Popular <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex d-sm-none text-white twitter-logo">
+          <a href="https://twitter.com/quoted_replies" target="_blank" rel="noopener">
+              <svg height="30" width="30" viewBox="283 369 405 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 630, 425 A 195, 195 0 0 1 331, 600 A 142, 142 0 0 0 428, 570 A  70,  70 0 0 1 370, 523 A  70,  70 0 0 0 401, 521 A  70,  70 0 0 1 344, 455 A  70,  70 0 0 0 372, 460 A  70,  70 0 0 1 354, 370 A 195, 195 0 0 0 495, 442 A  67,  67 0 0 1 611, 380 A 117, 117 0 0 0 654, 363 A  65,  65 0 0 1 623, 401 A 117, 117 0 0 0 662, 390 A  65,  65 0 0 1 630, 425 Z"
+                  style="fill:#fff;"/>
+              </svg>
+          </a>
+        </div>
+    </nav>
+    <div class="twitter-image f-r">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 50 50">
+            <path fill="#FFFFFF" d="M 35.001, 26.999 H 27 V 35 h -3.999 v -8.001 h -8.002 V 23 h 8.002 v -8 H 27 v 8 h 8.001 V 26.999 z" />
+        </svg>
+    </div>
+    <!-- Begin page content -->
+    <div class="container-fluid h-100">
+        <!-- Home page -->
+        <div id="page-home" class="active">
+            <h2>Home Page</h2>
+            <div class="block">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                1914 translation by H. Rackham
+            </div>
+        </div>
+        <!-- Feed page -->
+        <div id="page-feed" class="inactive">
+            <h2>Popular Tweets</h2>
+            <div class="block">
+                <blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://twitter.com/quoted_replies?ref_src=twsrc%5Etfw">@quoted_replies</a></p>&mdash; Dazils Ferdinand (@_dazils_) <a href="https://twitter.com/_dazils_/status/1246119110410416130?ref_src=twsrc%5Etfw">April 3, 2020</a></blockquote>
+            </div>
+        </div>
+        <!-- Create page -->
+        <div id="page-create" class="inactive">
+            <h2>About Page</h2>
+        </div>
+        <!-- Account page -->
+        <div id="page-account" class="inactive h-100">
+            <h2 class="d-flex justify-content-right">Account page</h2>
+            <div class="block row h-100 justify-content-center align-items-center">
+                <a class="twitter btn" href="#">
+                    <div class="twitter-icon btn-icon"></div>
+                    Login with Twitter
+                  </a>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+    </style>
+    <!-- Bottom Nav Bar -->
+    <footer class="footer d-sm-none">
+        <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
+            <button id="home" type="button" class="btn button-active">
+                <div class="selector-holder">
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </div>
+            </button>
+            <button id="feed" type="button" class="btn  button-inactive">
+                <div class="selector-holder">
+                    <i class="material-icons">trending_up</i>
+                    <span>Popular</span>
+                </div>
+            </button>
+            <button id="create" type="button" class="btn  button-inactive">
+                <div class="selector-holder">
+                    <i class="material-icons">info_outline</i>
+                    <span>About</span>
+                </div>
+            </button>
+            <button id="account" type="button" class="btn  button-inactive">
+                <div class="selector-holder">
+                    <i class="material-icons">perm_identity</i>
+                    <span>Account</span>
+                </div>
+            </button>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="libs/jquery/jquery.min.js" type="text/javascript"></script>
+    <script async src="libs/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- JS needed for this page -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+<!-- <script type="text/javascript" charset="utf-8">
+window.twttr = (function (d, s, id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = {
+        _e: [],
+        ready: function (f) {
+            t._e.push(f)
+        }
+    });
+}(document, "script", "twitter-wjs"));
+
+// twttr.events.bind('click', function(event) {
+//     event.preventDefault();
+// });   
+
+
+</script> -->

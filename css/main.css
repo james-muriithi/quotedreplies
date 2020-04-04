@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin-bottom: 80px;
+    margin-top: 90px;
+    font-family: "Menlo", "Meslo LG", monospace!important;
+}
+
+/*body[data-theme='dark']{
+  --text-color-normal: hsl(210, 10%, 62%);
+  background: #121212;
+  color: rgba(255,255,255, .8);
+}*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.twitter-logo{
+  cursor: pointer;
+}
+
+.twitter-image{
+  position: absolute;
+  right: 10px;
+  height: 60px;
+  width:60px;
+  bottom: 65px;
+  position: fixed;
+  background: #0B3F8E;
+  border-radius: 50%;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.twitter-image svg{
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.twitter-image svg:hover,
+.twitter-image svg:active,
+.twitter-image svg:focus{
+  transform: rotate(135deg);
+}
+
+.navbar {
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to right, #0b3f8e, #0e4aa5, #1255bc, #1661d4, #1a6ded)!important;
+}
+
+.navbar-brand svg{
+  border-radius: 50% ;
+  border: 1px solid #f8f9fa;
+}
+
+.navbar-nav{
+  font-family: 'PT Sans', sans-serif!important;
+}
+
+.navbar-nav .nav-item.active .nav-link{
+  font-weight: 800;
+}
+
+.group-container {
+    padding: 0;
+    height: 100%;
+}
+
+.selectors,
+.block {
+    height: 100%;
+    width: 100%;
+}
+
+.selectors button {
+    border: none;
+    border-radius: 0;
+    background-color: #f8f9fa !important;
+    width: 25%;
+    margin-left: 0;
+
+    -webkit-transition-property: min-width, max-width;
+    transition-property: min-width, max-width;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+}
+
+.selectors button:active {
+    border: none!important;
+    outline: none!important;
+}
+
+.selectors button:focus {
+    border: none!important;
+    outline: none!important;
+    box-shadow: 0 0 0 0px;
+}
+
+.active,
+.selector-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectors button.button-active{
+  border-bottom: 2px solid #6eb9f7!important;
+}
+
+.inactive {
+    display: none;
+}
+
+.selector-holder span {
+    font-size: 0.8rem;
+}
+
+/* Colors of the buttons*/
+.button-active,
+.selectors button:hover,
+.selectors button:active,
+.selectors button:focus {
+    padding-top: 3px;
+    -webkit-transition-property: padding-top;
+    transition-property: padding-top;
+
+    color: #6200ee;
+}
+
+.button-inactive {
+    color: #202121;
+}
+
+.selectors button i{
+  padding-top: 8px;
+  pointer-events: none;
+  transition-property: padding-top, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+.selectors button span{
+  margin-top: auto;
+  padding-bottom: 10px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  pointer-events: none;
+  transition-property: font-size, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  font-family: 'PT Sans', sans-serif!important;
+}
+
+.navbar-nav li{
+  display: inline-block!important;
+  margin-left: 1rem;
+}
+.navbar-nav li a{
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 576px) {
+    .twitter-image{
+      bottom: 20px;
+    }
+}
+
+/*small screens*/
+@media screen and (max-width: 667px) {
+    .navbar-nav{
+      margin-right: 10px;
+    }
+
+    .navbar-nav li a{
+      font-size: 1rem;
+    }
+}
+
+/*.app-search {
+  padding: calc(32px / 2) 0;
+}
+
+.app-search .form-control {
+  border: none;
+  height: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #e0e0ea;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 30px;
+}
+
+.app-search span {
+  position: absolute;
+  z-index: 10;
+  font-size: 13px;
+  line-height: 38px;
+  right: 13px;
+  top: 0;
+  color: #6c757d;
+}*/
