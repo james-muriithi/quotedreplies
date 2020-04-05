@@ -55,7 +55,7 @@
     <!-- As a heading -->
     <nav class="navbar fixed-top navbar-dark bg-primary nav-fill">
         <h2 class="navbar-brand mb-0 text-white">
-            <a href="#" rel="noopener" target="_blank" class="d-none redirect" style="display: none;">redirect</a>
+            <a href="#" rel="noopener" target="_blank" class="d-none redirect">redirect</a>
             <!-- logo -->
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet">
                 <metadata>
@@ -181,8 +181,8 @@
         const parsedUrl = new URL(window.location)
         
         if (parsedUrl.searchParams.get('url')) {
-            let expanded_url = parsedUrl.searchParams.get('url').trim();
-            if (typeof expanded_url != 'undefined' && expanded_url != '' && expanded_url != null) {
+            let expanded_url = parsedUrl.searchParams.get('url');
+            if (expanded_url) {
                 let parts = expanded_url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
                 try {
                     // let newWindow = window.open();
@@ -193,7 +193,7 @@
 
                     document.querySelector('.redirect').setAttribute("href", link)
 
-                    document.querySelector('.redirect').click();
+                    document.querySelector('.redirect').classList.remove('d-none')
 
 
                 } catch (error) {
