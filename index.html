@@ -179,33 +179,29 @@
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', () => {
         const parsedUrl = new URL(window.location)
+        let expanded_url = parsedUrl.searchParams.get('url');
 
-        alert('Title shared: ' + parsedUrl.searchParams.get('title'));
-        alert('Text shared: ' + parsedUrl.searchParams.get('text'));
-        alert('URL shared: ' + parsedUrl.searchParams.get('url'));
-        
-        // if (parsedUrl.searchParams.get('url')) {
-        //     let expanded_url = parsedUrl.searchParams.get('url');
-        //     if (expanded_url) {
-        //         let parts = expanded_url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
-        //         try {
-        //             // let newWindow = window.open();
-        //             let tweetId = parts[4]
-        //             let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
-        //             window.history.replaceState({}, document.title, "/quotedreplies/");
-        //             // alert(link);
+        expanded_url = expanded_url ? expanded_url : parsedUrl.searchParams.get('text');
 
-        //             document.querySelector('.redirect').setAttribute("href", link)
-
-        //             document.querySelector('.redirect').classList.remove('d-none')
-
-
-        //         } catch (error) {
-        //             console.log(error)
-        //         }
+        if (expanded_url) {
+            let parts = expanded_url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
+            try {
+                let tweetId = parts[4]
+                let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
+                window.history.replaceState({}, document.title, "/quotedreplies/");
                 
-        //     }
-        // }
+                window.history.replaceState({}, document.title, "/quotedreplies/");
+
+                document.querySelector('.redirect').setAttribute("href", link)
+
+                document.querySelector('.redirect').click();
+
+
+            } catch (error) {
+                console.log(error)
+            }
+            
+        }
     })
 </script>
 <!-- <script type="text/javascript" charset="utf-8">
