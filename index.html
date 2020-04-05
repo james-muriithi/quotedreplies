@@ -55,6 +55,7 @@
     <!-- As a heading -->
     <nav class="navbar fixed-top navbar-dark bg-primary nav-fill">
         <h2 class="navbar-brand mb-0 text-white">
+            <a href="#" rel="noopener" target="_blank" class="d-none redirect" style="display: none;">redirect</a>
             <!-- logo -->
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 400.000000 400.000000" preserveAspectRatio="xMidYMid meet">
                 <metadata>
@@ -188,10 +189,12 @@
                     let tweetId = parts[4]
                     let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
                     window.history.replaceState({}, document.title, "/quotedreplies/");
-                    window.location.href = link;
-                    // newWindow.location = link;
-                    // window.open(link, '_blank');
-                    alert(link);
+                    // alert(link);
+
+                    document.querySelector('.redirect').setAttribute("href", link)
+
+                    document.querySelector('.redirect').click();
+
 
                 } catch (error) {
                     console.log(error)
