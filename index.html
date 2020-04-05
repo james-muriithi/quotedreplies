@@ -257,17 +257,14 @@ $(document).ready(() => {
 
         if (link && tweetId) {
             $('input[name="url"]').val(url)
-            $('a.link').attr('href',link).text(link).parent().removeClass('d-none');
-            $('.search-svg svg').addClass('d-none');
+            $('a.link').attr('href',link).trigger('click')
+            // $('.search-svg svg').addClass('d-none');
         }
-    }else{
-        $('a.link').parent().addClass('d-none')
-        $('.search-svg svg').removeClass('d-none')
     }
+    
     $('a.link').on('click', function(event) {
-        window.history.replaceState({},'','/quotedreplies/',)
-        $('.search-svg svg').removeClass('d-none')
-        $('a.link').parent().addClass('d-none')
+        window.history.replaceState({},'','/quotedreplies/')
+        $('input[name="url"]').val('')
     });
 }) 
 
