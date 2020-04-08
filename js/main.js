@@ -25,9 +25,11 @@ window.onload = ()=> {
     pageIdList.forEach(page => {
         document.getElementById(page).addEventListener("click", changePage, false);
     });
-    $('.navbar-nav').children().each(function(index, el) {
-        $(el).on('click', changePage);
-    });
+    if (window.jQuery) {
+        $('.navbar-nav').children().each(function(index, el) {
+            $(el).on('click', changePage);
+        });
+    }
 }
 
 const changePage = function() {
@@ -64,13 +66,13 @@ const changePage = function() {
 }
 
 function generateLink (url) {
-            let parts = url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
-            try {
-                let tweetId = parts[4]
-                let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
-                return [link, tweetId];
+    let parts = url.match(/(^|[^'"])(https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(?:es)?\/(\d+))/);
+    try {
+        let tweetId = parts[4]
+        let link = `https://twitter.com/search?q=-from:quoted_replies%20url:${tweetId}`
+        return [link, tweetId];
 
-            } catch (error) {
-                return[null, null];
-            }
-        }
+    } catch (error) {
+        return[null, null];
+    }
+}
