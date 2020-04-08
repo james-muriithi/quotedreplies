@@ -63,6 +63,9 @@ height: 60%;
 .h-90{
   height: 90%;
 }
+.text-underline{
+  text-decoration: underline!important;
+}
 
 .twitter-logo{
   cursor: pointer;

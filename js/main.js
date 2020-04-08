@@ -32,6 +32,39 @@ window.onload = ()=> {
     }
 }
 
+window.addEventListener('DOMContentLoaded', function(){
+    if (window.jQuery) {
+        const parsedUrl = new URL(window.location)
+        let url = parsedUrl.searchParams.get('url');
+        console.log(url);
+
+        url = url ? url : parsedUrl.searchParams.get('text');
+
+        if (url) {
+            const [link, tweetId] = generateLink(url);
+
+            if (link && tweetId) {
+                $('input[name="url"]').val(url)
+                $('a.link').attr('href', link).parent().removeClass('d-none')
+                // $('.search-svg svg').addClass('d-none');
+            } else {
+                window.history.replaceState({}, '', '/quotedreplies/')
+                $('input[name="url"]').val('')
+                $('a.link').parent().addClass('d-none')
+            }
+        } else {
+            $('input[name="url"]').val('')
+            $('a.link').parent().addClass('d-none')
+        }
+
+        $('a.link').on('click', function(event) {
+            window.history.replaceState({}, '', '/quotedreplies/')
+            $('input[name="url"]').val('')
+            $('a.link').parent().addClass('d-none')
+        });
+    }
+})
+
 const changePage = function() {
     id = this.id ? this.id : this.dataset.trigger
     let currentSelector = document.getElementById(currentSelectorId);
@@ -76,3 +109,18 @@ function generateLink (url) {
         return[null, null];
     }
 }
+
+// window.twttr = (function (d, s, id) {
+//     var t, js, fjs = d.getElementsByTagName(s)[0];
+//     if (d.getElementById(id)) return;
+//     js = d.createElement(s);
+//     js.id = id;
+//     js.src = "https://platform.twitter.com/widgets.js";
+//     fjs.parentNode.insertBefore(js, fjs);
+//     return window.twttr || (t = {
+//         _e: [],
+//         ready: function (f) {
+//             t._e.push(f)
+//         }
+//     });
+// }(document, "script", "twitter-wjs"));
