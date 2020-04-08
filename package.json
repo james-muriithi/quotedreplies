@@ -12,6 +12,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-purgecss": "^2.1.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^1.0.4"
   },
