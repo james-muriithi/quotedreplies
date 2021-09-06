@@ -1,3 +1,3 @@
 # Quoted Replies Website
 
-# [Demo](https://james-muriithi.github.io/quotedreplies/)
+## [demo](https://james-muriithi.github.io/quotedreplies/)
