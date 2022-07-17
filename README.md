@@ -5,3 +5,4 @@ A website for [my twiiter bot](https://twitter.com/quoted_replies). If yo want t
 [here is the demo](https://james-muriithi.github.io/quotedreplies/)
 
 ## Licence
+MIT
